@@ -34,9 +34,6 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'debugger'
-
 group :test do
   gem 'minitest'
   gem 'factory_girl'
@@ -45,4 +42,5 @@ end
 
 group :development, :test do
   gem 'spring'
+  gem 'debugger'
 end
