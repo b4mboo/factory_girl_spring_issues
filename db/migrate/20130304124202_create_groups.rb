@@ -5,9 +5,9 @@ class CreateGroups < ActiveRecord::Migration
 
       t.timestamps
     end
-    create_table :users_groups, :id => false do |t|
+    create_table :groups_users, :id => false do |t|
       t.integer :user_id, :null => false
-      t.integer :comment_id, :null => false
+      t.integer :group_id, :null => false
     end
   end
 end

@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(:version => 20130304124202) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "groups_users", :id => false, :force => true do |t|
+    t.integer "user_id",  :null => false
+    t.integer "group_id", :null => false
+  end
+
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.integer  "user_id"
@@ -37,11 +42,6 @@ ActiveRecord::Schema.define(:version => 20130304124202) do
     t.string   "login"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "users_groups", :id => false, :force => true do |t|
-    t.integer "user_id",    :null => false
-    t.integer "comment_id", :null => false
   end
 
 end
