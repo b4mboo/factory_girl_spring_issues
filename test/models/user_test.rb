@@ -14,4 +14,8 @@ describe 'User' do
     subject.groups.wont_be_empty
     subject.groups.first.must_equal group
   end
+
+  it 'fails' do
+    subject.fail
+  end
 end

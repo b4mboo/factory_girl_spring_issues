@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
 
   attr_accessible :login
 
+  def fail
+    debugger
+    p 'stop'
+  end
 end
