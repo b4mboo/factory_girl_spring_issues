@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
-  attr_accessible :name
+
   has_many :posts
+  has_many :comments, :through => :posts
+
+  attr_accessible :name
+
 end
