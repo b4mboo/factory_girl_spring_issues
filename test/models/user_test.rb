@@ -1,9 +1,8 @@
 require 'minitest_helper'
 
 describe 'User' do
-  it 'might have my name' do
-    me = 'Bamboo'
-    user = User.create!(:name => me)
-    user.name.must_equal me
+  it 'has a working factory' do
+    user = FactoryGirl.create :user
+    user.name.wont_be_nil
   end
 end
